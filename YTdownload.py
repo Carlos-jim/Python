@@ -10,7 +10,7 @@ def ytdownload():
     video = YouTube(enlace, on_progress_callback=progress_function)
     
     # Guardamos el video en la variable descarga en maxima resolucion
-    descargar = video.streams.get_highest_resolution()
+    descargar = video.streams.filter(res="720p").first()
     
     # Se descarga el video
     descargar.download()
