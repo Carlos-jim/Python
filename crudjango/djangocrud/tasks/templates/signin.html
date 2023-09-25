@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+#Zona protegido, donde no aplica el base.html
+<h1>Sigini</h1>
+
+{{error}} #Visualizar el error
+
+<form action="" method="POST">
+    {{form.as_p}} #Formulario, as_p es para arreglar esteticamente el form
+    {% csrf_token %} #Token del form
+    <button type="button">Sign In</button>
+</form>
+
+{% endblock %}

@@ -8,19 +8,15 @@
 
 <body>
 
-    {% extends "base.html" %}
+    #Improtamos el contenido de base.html
+    {% extends " base.html" %}
 
     {% block content %}
-    {{error}}
-    <form action="/signup/" method="POST">
-        {{form.as_p}}
-        {% csrf_token %}
-        <button>
-            Signup
-        </button>
-        
-    </form>
-    {% end block %}
+    #Zona protegido, donde no aplica el base.html
+    <h1>Welcome bro</h1>
+    {% endblock %}
+
+
 
 </body>
 </html>
